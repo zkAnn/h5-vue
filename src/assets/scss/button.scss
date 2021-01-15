@@ -1,0 +1,15 @@
+@import './base.scss';
+.z-button {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 14px;
+    cursor: default;
+    border-radius: 5px;
+    @each $type,
+    $value in ( primary: $primary, warning: $warning, success: $success, info: $info, danger: $danger) {
+        &__#{$type} {
+            background: $value;
+        }
+    }
+}
